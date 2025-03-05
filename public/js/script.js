@@ -1,7 +1,5 @@
-import Swiper from 'swiper';
-import { Pagination } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/pagination';
+import Swiper from '/node_modules/swiper/swiper-bundle.esm.js';
+import '/node_modules/swiper/swiper-bundle.css';
 
 const menuBtn = document.getElementById('menuBtn');
 const mobileMenu = document.getElementById('mobileMenu');
@@ -22,25 +20,26 @@ function closeMenu() {
 menuBtn.addEventListener('click', toggleMenu);
 
 const menuItems = mobileMenu.querySelectorAll('a');
-menuItems.forEach(item => {
+menuItems.forEach((item) => {
   item.addEventListener('click', closeMenu);
 });
 
-
 document.addEventListener('click', (e) => {
-  if (mobileMenu.classList.contains('active') && 
-      !mobileMenu.contains(e.target) && 
-      !menuBtn.contains(e.target)) {
+  if (
+    mobileMenu.classList.contains('active') &&
+    !mobileMenu.contains(e.target) &&
+    !menuBtn.contains(e.target)
+  ) {
     closeMenu();
   }
 });
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
     const targetId = this.getAttribute('href');
     const targetElement = document.querySelector(targetId);
-    
+
     if (targetElement) {
       const headerOffset = 100;
       const elementPosition = targetElement.getBoundingClientRect().top;
@@ -48,42 +47,41 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
       window.scrollTo({
         top: offsetPosition,
-        behavior: 'smooth'
+        behavior: 'smooth',
       });
     }
   });
 });
 
-
-document.querySelectorAll('section[id]').forEach(section => {
+document.querySelectorAll('section[id]').forEach((section) => {
   section.style.scrollMarginTop = '100px';
 });
 
 const swiper = new Swiper('.swiper', {
-    modules: [Pagination],
-    slidesPerView: 1,
-    slidesPerGroup: 1,
-    spaceBetween: 30,
-    loop: true,
-    breakpoints: {
-      768: {
-        slidesPerView: 2,
-        slidesPerGroup: 2,
-      },
-      1024: {
-        slidesPerView: 3,
-        slidesPerGroup: 3,
-      },
+  modules: [Pagination],
+  slidesPerView: 1,
+  slidesPerGroup: 1,
+  spaceBetween: 30,
+  loop: true,
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
     },
+    1024: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+    },
+  },
 
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-      renderBullet: function (index, className) {
-        return '<span class="' + className + '"></span>';
-      },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '"></span>';
     },
-  });
+  },
+});
 
 const contactForm = document.getElementById('contactForm');
 const formMessage = document.getElementById('formMessage');
@@ -120,7 +118,7 @@ function setLoading(isLoading) {
 
 function validateForm(data) {
   const errors = {};
-  
+
   // Full Name validation
   if (!data.fullName || data.fullName.trim() === '') {
     errors.fullName = 'Please enter your full name';
@@ -145,18 +143,18 @@ function validateForm(data) {
 
 contactForm.addEventListener('submit', async (e) => {
   e.preventDefault();
-  
+
   // Clear previous errors
-  contactForm.querySelectorAll('.error-message').forEach(error => {
+  contactForm.querySelectorAll('.error-message').forEach((error) => {
     error.classList.add('opacity-0');
   });
-  contactForm.querySelectorAll('input, textarea').forEach(input => {
+  contactForm.querySelectorAll('input, textarea').forEach((input) => {
     input.classList.remove('border-red-500');
   });
-  
+
   const formData = new FormData(contactForm);
   const data = Object.fromEntries(formData.entries());
-  
+
   // Client-side validation
   const errors = validateForm(data);
   if (Object.keys(errors).length > 0) {
@@ -167,9 +165,9 @@ contactForm.addEventListener('submit', async (e) => {
     showFormMessage('Please fill in all required fields correctly.', true);
     return;
   }
-  
+
   setLoading(true);
-  
+
   try {
     const response = await fetch('/form-handler.php', {
       method: 'POST',
@@ -178,9 +176,9 @@ contactForm.addEventListener('submit', async (e) => {
       },
       body: JSON.stringify(data),
     });
-    
+
     const result = await response.json();
-    
+
     if (result.success) {
       showFormMessage(result.message);
       contactForm.reset();
@@ -201,6 +199,6 @@ contactForm.addEventListener('submit', async (e) => {
   }
 });
 
-contactForm.querySelectorAll('input, textarea').forEach(input => {
+contactForm.querySelectorAll('input, textarea').forEach((input) => {
   input.addEventListener('input', () => clearError(input));
 });

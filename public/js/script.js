@@ -1,7 +1,3 @@
-import { Pagination } from 'swiper/modules';
-import Swiper from 'swiper/bundle';
-import 'swiper/css/bundle';
-
 const menuBtn = document.getElementById('menuBtn');
 const mobileMenu = document.getElementById('mobileMenu');
 const body = document.body;
@@ -57,13 +53,15 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 document.querySelectorAll('section[id]').forEach((section) => {
   section.style.scrollMarginTop = '100px';
 });
-
-const swiper = new Swiper('.swiper', {
-  modules: [Pagination],
+var swiper = new Swiper('.swiper', {
   slidesPerView: 1,
   slidesPerGroup: 1,
   spaceBetween: 30,
   loop: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
   breakpoints: {
     768: {
       slidesPerView: 2,
@@ -72,14 +70,6 @@ const swiper = new Swiper('.swiper', {
     1024: {
       slidesPerView: 3,
       slidesPerGroup: 3,
-    },
-  },
-
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-    renderBullet: function (index, className) {
-      return '<span class="' + className + '"></span>';
     },
   },
 });

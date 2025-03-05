@@ -1,21 +1,26 @@
 <!doctype html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lawricks</title>
     <link href="output.css" rel="stylesheet" />
-</head>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </head>
   <body class="bg-[#0B0B0B] font-sans text-white">
     <main class="py-12">
       <header class="mx-auto max-w-7xl px-5 lg:px-0">
-    <div class="container mx-auto flex items-center justify-between">
-      <div class="flex items-center space-x-2">
+        <div class="container mx-auto flex items-center justify-between">
+          <div class="flex items-center space-x-2">
             <img src="/assets/logo.png" alt="Lavricks Logo" class="h-12 w-[210px]" />
-      </div>
-          
-          <button 
-            id="menuBtn" 
+          </div>
+
+          <button
+            id="menuBtn"
             class="group relative z-50 flex h-10 w-10 flex-col items-center justify-center gap-[7px] md:hidden"
             aria-label="Menu"
           >
@@ -24,13 +29,16 @@
             <span class="hamburger-line"></span>
           </button>
 
-      <nav class="hidden space-x-6 md:flex">
+          <nav class="hidden space-x-6 md:flex">
             <a href="#home" class="text-white transition hover:text-red-500">Home</a>
             <a href="#about" class="text-white transition hover:text-red-500">About</a>
             <a href="#contact" class="text-white transition hover:text-red-500">Order</a>
           </nav>
 
-          <div id="mobileMenu" class="fixed inset-0 z-40 -translate-x-full bg-black bg-opacity-95 transition-transform duration-300 md:hidden">
+          <div
+            id="mobileMenu"
+            class="fixed inset-0 z-40 -translate-x-full bg-black bg-opacity-95 transition-transform duration-300 md:hidden"
+          >
             <nav class="flex h-full flex-col items-center justify-center space-y-8 text-2xl">
               <a href="#home" class="text-white transition hover:text-red-500">Home</a>
               <a href="#about" class="text-white transition hover:text-red-500">About</a>
@@ -41,17 +49,17 @@
               >
                 Contact
               </a>
-      </nav>
+            </nav>
           </div>
 
           <a
             href="#contact"
-            class="ml-4 hidden md:inline-block w-[210px] rounded bg-[#ED3333] py-[18px] text-center text-base text-white transition hover:bg-[#ED3333]/80"
+            class="ml-4 hidden w-[210px] rounded bg-[#ED3333] py-[18px] text-center text-base text-white transition hover:bg-[#ED3333]/80 md:inline-block"
           >
-        Contact
-      </a>
-    </div>
-  </header>
+            Contact
+          </a>
+        </div>
+      </header>
 
       <div class="border-b border-white border-opacity-20">
         <section id="home" class="mx-auto max-w-7xl pb-[200px] pt-[200px]">
@@ -70,25 +78,25 @@
                   alt="Pablo"
                   class="inline-block h-[84px] w-[135px] align-baseline"
                 />
-      </h1>
+              </h1>
               <a
                 href="#contact"
                 class="inline-block w-[210px] rounded bg-[#ED3333] py-[18px] text-center text-base text-white transition hover:bg-[#ED3333]/80"
               >
-        Shop Now
-      </a>
-      </div>
-      <div class="flex justify-center">
+                Shop Now
+              </a>
+            </div>
+            <div class="flex justify-center">
               <div>
-        <img 
+                <img
                   src="/assets/hero_banners.png"
-          alt="Hero Banners" 
+                  alt="Hero Banners"
                   class="mx-auto h-auto min-h-[340px] w-auto max-w-full object-contain"
-        />
+                />
               </div>
-      </div>
-    </div>
-  </section>
+            </div>
+          </div>
+        </section>
       </div>
 
       <div class="border-b border-white border-opacity-20">
@@ -96,7 +104,7 @@
           <div class="container mx-auto px-4 text-center">
             <h2 class="mb-6 text-3xl font-bold md:text-5xl">About</h2>
             <p class="mt-12 text-base leading-relaxed text-gray-300 md:text-lg">
-        Lavricks is an exclusive importer for popular snus brands like Killa, KIC, and Pablo, 
+              Lavricks is an exclusive importer for popular snus brands like Killa, KIC, and Pablo,
               supporting a wide variety of high-quality nicotine pouches from Europe. Our mission is
               to bring top-quality products closer to our customers by providing unbeatable service
               and exceptional product knowledge.
@@ -122,8 +130,8 @@
             >
               Contact
             </a>
-    </div>
-  </section>
+          </div>
+        </section>
       </div>
 
       <section id="products" class="mx-auto max-w-7xl py-12">
@@ -450,62 +458,10 @@
                 <div class="flex items-center justify-center">
                   <img
                     src="/assets/product_1.png"
-            alt="Killa Extra Strong" 
-                    class="mb-9 h-[254px] w-auto"
-                  />
-                </div>
-                <h3 class="mb-2 text-[30px] font-medium text-black">Killa Extra Strong</h3>
-                <div class="mb-7 flex items-center justify-center">
-                  <div class="mr-2">
-                    <img
-                      src="/assets/star.png"
-                      alt="Star"
-                      class="inline-block h-[18px] w-[18px] align-baseline"
-                    />
-                    <img
-                      src="/assets/star.png"
-                      alt="Star"
-                      class="inline-block h-[18px] w-[18px] align-baseline"
-                    />
-                    <img
-                      src="/assets/star.png"
-                      alt="Star"
-                      class="inline-block h-[18px] w-[18px] align-baseline"
-                    />
-                    <img
-                      src="/assets/star.png"
-                      alt="Star"
-                      class="inline-block h-[18px] w-[18px] align-baseline"
-                    />
-                    <img
-                      src="/assets/star.png"
-                      alt="Star"
-                      class="inline-block h-[18px] w-[18px] align-baseline"
-                    />
-                  </div>
-                  <p class="font-medium text-black">100 REVIEWS</p>
-                </div>
-                <p class="mb-4 hidden text-gray-300">
-            Experience the classic Killa punch with a strong, long-lasting flavor.
-          </p>
-                <a
-                  href=""
-                  class="inline-block w-full rounded bg-[#ED3333] py-[13px] text-center text-base text-white transition hover:bg-[#ED3333]/80"
-                >
-                  MORE INFO
-                </a>
-              </div>
-
-              <div
-                class="swiper-slide flex flex-col items-center bg-white p-4 py-[37px] text-center"
-              >
-                <div class="flex items-center justify-center">
-                  <img
-                    src="/assets/product_1.png"
                     alt="Killa Extra Strong"
                     class="mb-9 h-[254px] w-auto"
                   />
-        </div>
+                </div>
                 <h3 class="mb-2 text-[30px] font-medium text-black">Killa Extra Strong</h3>
                 <div class="mb-7 flex items-center justify-center">
                   <div class="mr-2">
@@ -546,15 +502,67 @@
                 >
                   MORE INFO
                 </a>
-        </div>
-      </div>
+              </div>
+
+              <div
+                class="swiper-slide flex flex-col items-center bg-white p-4 py-[37px] text-center"
+              >
+                <div class="flex items-center justify-center">
+                  <img
+                    src="/assets/product_1.png"
+                    alt="Killa Extra Strong"
+                    class="mb-9 h-[254px] w-auto"
+                  />
+                </div>
+                <h3 class="mb-2 text-[30px] font-medium text-black">Killa Extra Strong</h3>
+                <div class="mb-7 flex items-center justify-center">
+                  <div class="mr-2">
+                    <img
+                      src="/assets/star.png"
+                      alt="Star"
+                      class="inline-block h-[18px] w-[18px] align-baseline"
+                    />
+                    <img
+                      src="/assets/star.png"
+                      alt="Star"
+                      class="inline-block h-[18px] w-[18px] align-baseline"
+                    />
+                    <img
+                      src="/assets/star.png"
+                      alt="Star"
+                      class="inline-block h-[18px] w-[18px] align-baseline"
+                    />
+                    <img
+                      src="/assets/star.png"
+                      alt="Star"
+                      class="inline-block h-[18px] w-[18px] align-baseline"
+                    />
+                    <img
+                      src="/assets/star.png"
+                      alt="Star"
+                      class="inline-block h-[18px] w-[18px] align-baseline"
+                    />
+                  </div>
+                  <p class="font-medium text-black">100 REVIEWS</p>
+                </div>
+                <p class="mb-4 hidden text-gray-300">
+                  Experience the classic Killa punch with a strong, long-lasting flavor.
+                </p>
+                <a
+                  href=""
+                  class="inline-block w-full rounded bg-[#ED3333] py-[13px] text-center text-base text-white transition hover:bg-[#ED3333]/80"
+                >
+                  MORE INFO
+                </a>
+              </div>
+            </div>
           </div>
           <div class="swiper-pagination"></div>
-    </div>
-  </section>
+        </div>
+      </section>
 
       <section id="contact" class="mx-auto w-full max-w-7xl py-12 text-white">
-    <div class="container mx-auto px-4">
+        <div class="container mx-auto px-4">
           <div class="flex flex-col items-center gap-12 lg:flex-row lg:items-start">
             <div class="text-center md:w-1/3 lg:text-left">
               <h2 class="mb-6 text-3xl font-bold md:text-5xl">Contact us</h2>
@@ -579,16 +587,24 @@
 
             <div class="w-full lg:w-2/3">
               <div class="p-6">
-                <form id="contactForm" class="space-y-4" action="/form-handler.php" method="POST" novalidate>
+                <form
+                  id="contactForm"
+                  class="space-y-4"
+                  action="/form-handler.php"
+                  method="POST"
+                  novalidate
+                >
                   <div class="relative">
                     <input
                       type="text"
                       name="fullName"
                       placeholder="Full Name *"
-                      class="w-full border border-[#3A3A3A] bg-[#2E2E2E] p-3 text-white placeholder:text-white placeholder:text-opacity-70 focus:outline-none focus:ring-2 focus:ring-red-500 transition-all duration-300"
+                      class="w-full border border-[#3A3A3A] bg-[#2E2E2E] p-3 text-white transition-all duration-300 placeholder:text-white placeholder:text-opacity-70 focus:outline-none focus:ring-2 focus:ring-red-500"
                       required
                     />
-                    <span class="error-message text-red-500 text-sm mt-1 opacity-0 transition-all duration-300"></span>
+                    <span
+                      class="error-message mt-1 text-sm text-red-500 opacity-0 transition-all duration-300"
+                    ></span>
                   </div>
 
                   <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
@@ -597,19 +613,23 @@
                         type="text"
                         name="companyName"
                         placeholder="Company Name"
-                        class="w-full border border-[#3A3A3A] bg-[#2E2E2E] p-3 text-white placeholder:text-white placeholder:text-opacity-70 focus:outline-none focus:ring-2 focus:ring-red-500 transition-all duration-300"
+                        class="w-full border border-[#3A3A3A] bg-[#2E2E2E] p-3 text-white transition-all duration-300 placeholder:text-white placeholder:text-opacity-70 focus:outline-none focus:ring-2 focus:ring-red-500"
                       />
-                      <span class="error-message text-red-500 text-sm mt-1 opacity-0 transition-all duration-300"></span>
+                      <span
+                        class="error-message mt-1 text-sm text-red-500 opacity-0 transition-all duration-300"
+                      ></span>
                     </div>
                     <div class="relative">
                       <input
                         type="email"
                         name="email"
                         placeholder="Email *"
-                        class="w-full border border-[#3A3A3A] bg-[#2E2E2E] p-3 text-white placeholder:text-white placeholder:text-opacity-70 focus:outline-none focus:ring-2 focus:ring-red-500 transition-all duration-300"
+                        class="w-full border border-[#3A3A3A] bg-[#2E2E2E] p-3 text-white transition-all duration-300 placeholder:text-white placeholder:text-opacity-70 focus:outline-none focus:ring-2 focus:ring-red-500"
                         required
                       />
-                      <span class="error-message text-red-500 text-sm mt-1 opacity-0 transition-all duration-300"></span>
+                      <span
+                        class="error-message mt-1 text-sm text-red-500 opacity-0 transition-all duration-300"
+                      ></span>
                     </div>
                   </div>
 
@@ -618,10 +638,12 @@
                       type="tel"
                       name="telephone"
                       placeholder="Telephone *"
-                      class="w-full border border-[#3A3A3A] bg-[#2E2E2E] p-3 text-white placeholder:text-white placeholder:text-opacity-70 focus:outline-none focus:ring-2 focus:ring-red-500 transition-all duration-300"
+                      class="w-full border border-[#3A3A3A] bg-[#2E2E2E] p-3 text-white transition-all duration-300 placeholder:text-white placeholder:text-opacity-70 focus:outline-none focus:ring-2 focus:ring-red-500"
                       required
                     />
-                    <span class="error-message text-red-500 text-sm mt-1 opacity-0 transition-all duration-300"></span>
+                    <span
+                      class="error-message mt-1 text-sm text-red-500 opacity-0 transition-all duration-300"
+                    ></span>
                   </div>
 
                   <div class="relative">
@@ -629,35 +651,54 @@
                       name="message"
                       rows="4"
                       placeholder="Additional Message"
-                      class="w-full border border-[#3A3A3A] bg-[#2E2E2E] p-3 text-white placeholder:text-white placeholder:text-opacity-70 focus:outline-none focus:ring-2 focus:ring-red-500 transition-all duration-300"
+                      class="w-full border border-[#3A3A3A] bg-[#2E2E2E] p-3 text-white transition-all duration-300 placeholder:text-white placeholder:text-opacity-70 focus:outline-none focus:ring-2 focus:ring-red-500"
                     ></textarea>
-                    <span class="error-message text-red-500 text-sm mt-1 opacity-0 transition-all duration-300"></span>
+                    <span
+                      class="error-message mt-1 text-sm text-red-500 opacity-0 transition-all duration-300"
+                    ></span>
                   </div>
 
                   <div class="relative">
                     <button
                       type="submit"
-                      class="w-full bg-red-600 px-8 py-3 font-medium text-white transition hover:bg-red-700 md:w-auto disabled:opacity-50 disabled:cursor-not-allowed"
+                      class="w-full bg-red-600 px-8 py-3 font-medium text-white transition hover:bg-red-700 disabled:cursor-not-allowed disabled:opacity-50 md:w-auto"
                     >
                       <span class="submit-text">SUBMIT NOW</span>
                       <span class="loading-spinner hidden">
-                        <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        <svg
+                          class="h-5 w-5 animate-spin text-white"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                        >
+                          <circle
+                            class="opacity-25"
+                            cx="12"
+                            cy="12"
+                            r="10"
+                            stroke="currentColor"
+                            stroke-width="4"
+                          ></circle>
+                          <path
+                            class="opacity-75"
+                            fill="currentColor"
+                            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                          ></path>
                         </svg>
                       </span>
                     </button>
-                    <div id="formMessage" class="mt-4 text-center opacity-0 transition-all duration-300"></div>
+                    <div
+                      id="formMessage"
+                      class="mt-4 text-center opacity-0 transition-all duration-300"
+                    ></div>
                   </div>
                 </form>
               </div>
             </div>
           </div>
-    </div>
-  </section>
-
-  
-  </main>
+        </div>
+      </section>
+    </main>
 
     <div class="bg-[#131313]">
       <footer
@@ -687,7 +728,7 @@
                 <path
                   d="M10.1905 0.310547C5.18073 0.310547 0.229553 3.65039 0.229553 9.05566C0.229553 12.4932 2.16315 14.4463 3.33502 14.4463C3.81842 14.4463 4.09674 13.0986 4.09674 12.7178C4.09674 12.2637 2.93951 11.2969 2.93951 9.40723C2.93951 5.48145 5.9278 2.69824 9.79498 2.69824C13.1202 2.69824 15.5811 4.58789 15.5811 8.05957C15.5811 10.6523 14.5411 15.5156 11.1719 15.5156C9.95612 15.5156 8.91608 14.6367 8.91608 13.377C8.91608 11.5312 10.2051 9.74414 10.2051 7.83984C10.2051 4.60742 5.62018 5.19336 5.62018 9.09961C5.62018 9.91992 5.72272 10.8281 6.08893 11.5752C5.4151 14.4756 4.03815 18.7969 4.03815 21.7852C4.03815 22.708 4.16998 23.6162 4.25787 24.5391C4.42389 24.7246 4.34088 24.7051 4.59479 24.6123C7.05573 21.2432 6.96783 20.584 8.08112 16.1748C8.6817 17.3174 10.2344 17.9326 11.4649 17.9326C16.6505 17.9326 18.9796 12.8789 18.9796 8.32324C18.9796 3.47461 14.7901 0.310547 10.1905 0.310547Z"
                   fill="white"
-                   class="transition-colors duration-300 group-hover:fill-[#E1306C]"
+                  class="transition-colors duration-300 group-hover:fill-[#E1306C]"
                 />
               </svg>
             </a>
@@ -699,11 +740,10 @@
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-               
               >
                 <path
                   d="M11.7176 5.65005C8.42287 5.65005 5.76536 8.30816 5.76536 11.6036C5.76536 14.899 8.42287 17.5571 11.7176 17.5571C15.0123 17.5571 17.6698 14.899 17.6698 11.6036C17.6698 8.30816 15.0123 5.65005 11.7176 5.65005ZM11.7176 15.4742C9.58845 15.4742 7.84785 13.7384 7.84785 11.6036C7.84785 9.46881 9.58327 7.73301 11.7176 7.73301C13.8519 7.73301 15.5873 9.46881 15.5873 11.6036C15.5873 13.7384 13.8467 15.4742 11.7176 15.4742ZM19.3016 5.40652C19.3016 6.17857 18.6799 6.79516 17.9132 6.79516C17.1414 6.79516 16.5249 6.17338 16.5249 5.40652C16.5249 4.63966 17.1466 4.01788 17.9132 4.01788C18.6799 4.01788 19.3016 4.63966 19.3016 5.40652ZM23.2438 6.81589C23.1557 4.95573 22.7309 3.30802 21.3685 1.95047C20.0113 0.592921 18.3639 0.168039 16.5042 0.0747725C14.5875 -0.0340387 8.84248 -0.0340387 6.92576 0.0747725C5.0712 0.162858 3.42385 0.58774 2.06142 1.94529C0.698996 3.30284 0.279389 4.95055 0.186143 6.81071C0.0773565 8.72786 0.0773565 14.4741 0.186143 16.3913C0.274209 18.2514 0.698996 19.8991 2.06142 21.2567C3.42385 22.6142 5.06602 23.0391 6.92576 23.1324C8.84248 23.2412 14.5875 23.2412 16.5042 23.1324C18.3639 23.0443 20.0113 22.6194 21.3685 21.2567C22.7258 19.8991 23.1506 18.2514 23.2438 16.3913C23.3526 14.4741 23.3526 8.73304 23.2438 6.81589ZM20.7676 18.4483C20.3635 19.4639 19.5813 20.2463 18.5608 20.6556C17.0326 21.2619 13.4064 21.122 11.7176 21.122C10.0288 21.122 6.39736 21.2567 4.87434 20.6556C3.859 20.2515 3.07677 19.4691 2.66752 18.4483C2.06142 16.9198 2.20129 13.2927 2.20129 11.6036C2.20129 9.91442 2.0666 6.2822 2.66752 4.75884C3.07159 3.74327 3.85382 2.96086 4.87434 2.55152C6.40254 1.94529 10.0288 2.08519 11.7176 2.08519C13.4064 2.08519 17.0378 1.95047 18.5608 2.55152C19.5761 2.95568 20.3584 3.73808 20.7676 4.75884C21.3737 6.28738 21.2338 9.91442 21.2338 11.6036C21.2338 13.2927 21.3737 16.925 20.7676 18.4483Z"
-                   class="transition-colors duration-300 group-hover:fill-[#E1306C]"
+                  class="transition-colors duration-300 group-hover:fill-[#E1306C]"
                   fill="white"
                 />
               </svg>
@@ -756,5 +796,5 @@
     </div>
 
     <script type="module" src="/js/script.js"></script>
-</body>
+  </body>
 </html>

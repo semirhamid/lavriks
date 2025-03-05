@@ -1,5 +1,7 @@
-import Swiper from '/node_modules/swiper/swiper-bundle.esm.js';
-import '/node_modules/swiper/swiper-bundle.css';
+import Swiper from 'swiper';
+import { Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 const menuBtn = document.getElementById('menuBtn');
 const mobileMenu = document.getElementById('mobileMenu');

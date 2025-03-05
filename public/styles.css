@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  @apply scroll-smooth;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+@layer utilities {
+  .scroll-smooth {
+    scroll-behavior: smooth;
+  }
+}
+
+section[id] {
+  scroll-margin-top: 100px;
+}
+
+.swiper-pagination-bullet {
+  margin: 0 6px !important;
+  background: transparent;
+  opacity: 1;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    border-color 0.3s;
+}
+
+.swiper-pagination {
+  bottom: 40px !important;
+  display: none !important;
+}
+
+#products .swiper-pagination .swiper-pagination-bullet {
+  width: 5px !important;
+  height: 35px !important;
+  background-color: #fff !important;
+  opacity: 1 !important;
+}
+
+#products .swiper-pagination {
+  position: relative;
+  bottom: -3rem !important;
+}
+
+#products .swiper-pagination .swiper-pagination-bullet {
+  position: relative;
+  width: 50px !important;
+  height: 50px !important;
+  background-color: transparent !important;
+  opacity: 1 !important;
+  margin: 0 15px !important;
+}
+
+#products .swiper-pagination .swiper-pagination-bullet::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+#products .swiper-pagination .swiper-pagination-bullet::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 35px;
+  height: 35px;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+#products .swiper-pagination .swiper-pagination-bullet-active::before {
+  background-color: #ed3333;
+  width: 20px;
+  height: 20px;
+}
+
+#products .swiper-pagination .swiper-pagination-bullet-active::after {
+  border-color: #ed3333;
+}
+
+/* Hamburger Menu Styles */
+.hamburger-line {
+  @apply h-[2px] w-6 bg-white transition-all duration-300;
+}
+
+/* Hamburger Animation */
+#menuBtn.active .hamburger-line:nth-child(1) {
+  @apply translate-y-[9px] rotate-45;
+}
+
+#menuBtn.active .hamburger-line:nth-child(2) {
+  @apply opacity-0;
+}
+
+#menuBtn.active .hamburger-line:nth-child(3) {
+  @apply -translate-y-[9px] -rotate-45;
+}
+
+/* Mobile Menu Animation */
+#mobileMenu.active {
+  @apply translate-x-0;
+}
+
+/* Prevent scrolling when menu is open */
+body.menu-open {
+  @apply overflow-hidden;
+}
+
+@media (min-width: 768px) {
+  .swiper-pagination{
+    display: block !important;
+  }
+}
+
+/* Hide default scrollbar and add custom styling */
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-[#0B0B0B];
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-[#333333] rounded-full hover:bg-[#ED3333] transition-colors duration-200;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #333333 #0B0B0B;
+}
+
+/* Hide scrollbar for Chrome/Safari/Opera on mobile but show on hover */
+@media (max-width: 768px) {
+  ::-webkit-scrollbar {
+    @apply w-0;
+  }
+  
+  body:hover::-webkit-scrollbar {
+    @apply w-1;
+  }
+}
+

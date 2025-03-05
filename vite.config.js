@@ -15,12 +15,12 @@ export default defineConfig({
   server: {
     open: true,
   },
-  optimizeDeps: {
-    include: ['swiper', 'swiper/modules'],
-  },
   resolve: {
     alias: {
-      '/node_modules': resolve(__dirname, './node_modules'),
+      '@': resolve(__dirname, 'src'),
     },
+  },
+  optimizeDeps: {
+    include: ['swiper'],
   },
 });

@@ -38,7 +38,7 @@ if (!empty($errors)) {
     exit;
 }
 
-$to = "info@lavricks.com";
+$to = "alex@cohoda.com";
 $subject = "New Contact Form Submission";
 $message = "Name: " . $data['fullName'] . "\n";
 $message .= "Company: " . ($data['companyName'] ?? 'Not provided') . "\n";
